@@ -1,0 +1,49 @@
+<div class="wi_monitor_settings">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>WI Monitor</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <!-- Enable toggle -->
+            <div class="flex-container">
+                <label class="checkbox_label" for="wi_monitor_enabled">
+                    <input id="wi_monitor_enabled" type="checkbox" />
+                    <span>Enable WI Monitor</span>
+                </label>
+            </div>
+
+            <!-- Show constant entries toggle -->
+            <div class="flex-container">
+                <label class="checkbox_label" for="wi_monitor_show_constant">
+                    <input id="wi_monitor_show_constant" type="checkbox" />
+                    <span>Show constant (always-on) entries</span>
+                </label>
+            </div>
+
+            <!-- Manual refresh button -->
+            <div class="flex-container">
+                <div id="wi_monitor_refresh_btn" class="menu_button menu_button_icon" title="Re-display last activation data">
+                    <span class="fa-solid fa-arrows-rotate"></span>
+                    <span>Refresh Display</span>
+                </div>
+            </div>
+
+            <!-- Timestamp -->
+            <div class="flex-container">
+                <small id="wi_monitor_timestamp" class="wi_monitor_timestamp">No data yet — send a message to populate</small>
+            </div>
+
+            <!-- Badge showing count -->
+            <div class="flex-container wi_monitor_status_bar">
+                <span>Active entries:</span>
+                <span id="wi_monitor_badge" class="wi_monitor_badge" style="display:none;">0</span>
+            </div>
+
+            <!-- Scrollable entries list -->
+            <div id="wi_monitor_entries" class="wi_monitor_entries_container">
+                <div class="wi_monitor_empty">Waiting for first generation...</div>
+            </div>
+        </div>
+    </div>
+</div>

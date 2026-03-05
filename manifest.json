@@ -1,0 +1,13 @@
+{
+    "display_name": "WI Monitor",
+    "loading_order": 100,
+    "requires": [],
+    "optional": [],
+    "dependencies": [],
+    "js": "index.js",
+    "css": "style.css",
+    "author": "Cheesedozer",
+    "version": "1.0.0",
+    "homePage": "https://github.com/Cheesedozer/WI-Monitor-World-Info-Moniter-",
+    "auto_update": true
+}
