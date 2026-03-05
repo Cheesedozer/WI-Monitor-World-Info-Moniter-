@@ -4,6 +4,7 @@
 // ============================================================
 
 const MODULE_NAME = 'wi_monitor';
+const EXTENSION_FOLDER = 'third-party/WI-Monitor-World-Info-Moniter-';
 
 // ── Default Settings ──────────────────────────────────────────
 const defaultSettings = Object.freeze({
@@ -179,9 +180,8 @@ function syncSettingsUI() {
 
     // Load settings HTML
     try {
-        const settingsHtml = await $.get(
-            `/scripts/extensions/third-party/SillyTavern-WIMonitor/settings.html`,
-        );
+        const { renderExtensionTemplateAsync } = SillyTavern.getContext();
+        const settingsHtml = await renderExtensionTemplateAsync(EXTENSION_FOLDER, 'settings');
         $('#extensions_settings2').append(settingsHtml);
     } catch (error) {
         console.error(`[${MODULE_NAME}] Failed to load settings HTML:`, error);
